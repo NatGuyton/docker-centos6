@@ -1,0 +1,8 @@
+#!/bin/bash
+
+timestamp=`date +%Y%m%d`
+
+docker build --no-cache=true -t="guyton/centos6:$timestamp" . 
+
+docker tag -f guyton/centos6:$timestamp guyton/centos6:latest
+
